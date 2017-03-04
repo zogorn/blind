@@ -1,0 +1,29 @@
+head(lang=lang)
+
+	// page title
+	title #{title}
+
+	// start meta tags
+	meta(charset='UTF-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1')
+	// end meta tags
+
+
+	
+	if bootstrap == 1
+		// links for bootstrap
+		link(rel='stylesheet' href='assets/css/bootstrap.min.css')
+
+	
+	if fontAwesome ==  1
+		// links for font-awesome
+		link(rel='stylesheet' href='assets/css/font-awesome.min.css')
+
+
+	// links for global fonts
+	link(rel='stylesheet' href=fontLink)
+
+
+	// main style link
+	link(rel='stylesheet' href='assets/css/style.min.css')
+

@@ -1,0 +1,29 @@
+- var lang = 'en' // site language
+- var title = 'zogorn' /// page title
+- var fontLink = 'https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' // the font URL
+
+
+//- used lib
+- var bootstrap 	= true
+- var jquery 		= true
+- var fontAwesome 	= true
+
+
+doctype html
+
+html
+	include pages/01_head
+
+	body
+		// start header
+		header.siteHeader: include pages/03_header
+		// end header
+
+
+		include pages/01_home/home-body
+
+		// start footer
+		footer.siteFooter: include pages/04_footer
+		// end footer
+		
+		include pages/02_scripts
