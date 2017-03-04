@@ -1,0 +1,36 @@
+// start navbar
+nav.navbar.navbar-default
+	// start container
+	.container
+
+		// start navbar-header
+		.navbar-header
+			button(type='button' data-toggle='collapse' data-target='#header-nav' aria-expanded='false' class='navbar-toggle collapsed')
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a(class='navbar-brand' href='#') my brand
+		<!-- end navbar-header -->
+
+
+		// start navbar-collapse
+		#header-nav.collapse.navbar-collapse
+			ul.nav.navbar-nav.navbar-right
+				li.active: a(href='#') home
+				li: a(href='#') about us
+				li: a(href='#') our work
+				li: a(href='#') our results
+				li: a(href='#') join us
+				li.dropdown
+					a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' area-haspopup='true' aria-expanded='false') how to join 
+						span.caret
+					ul.dropdown-menu
+						li: a(href='#') wirte with us
+						li: a(href='#') review with us
+						li(role='seprator' class='divider')
+						li: a(href='#') spread idea
+				li: a(href='#') contact us
+			<!-- end ul -->
+		<!-- end navbar-collapse -->
+	<!-- end container -->
+<!-- end navbar -->
