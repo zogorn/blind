@@ -1,36 +1,24 @@
-// start navbar
-nav.navbar.navbar-default
-	// start container
+// start navigation bar
+nav.navbar.navbar-toggleable-md.bg-inverse.navbar-inverse
 	.container
-
-		// start navbar-header
-		.navbar-header
-			button(type='button' data-toggle='collapse' data-target='#header-nav' aria-expanded='false' class='navbar-toggle collapsed')
-				span.icon-bar
-				span.icon-bar
-				span.icon-bar
-			a(class='navbar-brand' href='#') my brand
-		<!-- end navbar-header -->
-
+		button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+			span.navbar-toggler-icon
+		a(href='#').navbar-brand blind
 
 		// start navbar-collapse
-		#header-nav.collapse.navbar-collapse
-			ul.nav.navbar-nav.navbar-right
-				li.active: a(href='#') home
-				li: a(href='#') about us
-				li: a(href='#') our work
-				li: a(href='#') our results
-				li: a(href='#') join us
-				li.dropdown
-					a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' area-haspopup='true' aria-expanded='false') how to join 
-						span.caret
-					ul.dropdown-menu
-						li: a(href='#') wirte with us
-						li: a(href='#') review with us
-						li(role='seprator' class='divider')
-						li: a(href='#') spread idea
-				li: a(href='#') contact us
+		#headerNav.collapse.navbar-collapse.justify-content-end
+			ul.navbar-nav
+				li.nav-item.active: a(href='#').nav-link home
+				li.nav-item: a(href='#').nav-link about us
+				li.nav-item: a(href='#').nav-link our results
+				li.nav-item.dropdown
+					a(href='#' data-toggle='dropdown').nav-link.dropdown-toggle#nav_header_dropdown why join us
+					.dropdown-menu(aria-labelledby='nav_header_dropdown')
+						a(href='#').dropdown-item spread idea
+						a(href='#').dropdown-item write with us
+						a(href='#').dropdown-item review with us
+				li.nav-item: a(href='#').nav-link contact us
 			<!-- end ul -->
 		<!-- end navbar-collapse -->
 	<!-- end container -->
-<!-- end navbar -->
+<!-- end navigation bar -->
