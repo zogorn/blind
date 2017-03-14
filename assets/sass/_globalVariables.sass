@@ -2,6 +2,7 @@
 @import "bootstrap/variables"
 @import "bootstrap/mixins"
 
+
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
@@ -32,3 +33,119 @@ $brand-info:                $teal !default
 $brand-warning:             $orange !default
 $brand-danger:              $red !default
 $brand-inverse:             $gray-dark !default
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:       $white !default
+$body-color:    $gray-dark !default
+$inverse-bg:    $gray-dark !default
+$inverse-color: $gray-lighter !default
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:            $brand-primary !default
+$link-decoration:       none !default
+$link-hover-color:      darken($link-color, 15%) !default
+$link-hover-decoration: underline !default
+
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width:             10rem !default
+$dropdown-padding-y:             .5rem !default
+$dropdown-margin-top:            .125rem !default
+$dropdown-bg:                    $white !default
+$dropdown-border-color:          rgba($black,.15) !default
+$dropdown-border-width:          $border-width !default
+$dropdown-divider-bg:            $gray-lighter !default
+$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default
+
+$dropdown-link-color:            $gray-dark !default
+$dropdown-link-hover-color:      darken($gray-dark, 5%) !default
+$dropdown-link-hover-bg:         $gray-lightest !default
+
+$dropdown-link-active-color:     $component-active-color !default
+$dropdown-link-active-bg:        $component-active-bg !default
+
+$dropdown-link-disabled-color:   $gray-light !default
+
+$dropdown-item-padding-x:        1.5rem !default
+
+$dropdown-header-color:          $gray-light !default
+
+
+// Navbar
+
+$navbar-border-radius:              $border-radius !default
+$navbar-padding-x:                  $spacer !default
+$navbar-padding-y:                  ($spacer / 2) !default
+
+$navbar-brand-padding-y:            .25rem !default
+
+$navbar-toggler-padding-x:           .75rem !default
+$navbar-toggler-padding-y:           .25rem !default
+$navbar-toggler-font-size:           $font-size-lg !default
+$navbar-toggler-border-radius:       $btn-border-radius !default
+
+$navbar-inverse-color:                 rgba($white,.5) !default
+$navbar-inverse-hover-color:           rgba($white,.75) !default
+$navbar-inverse-active-color:          rgba($white,1) !default
+$navbar-inverse-disabled-color:        rgba($white,.25) !default
+$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default
+$navbar-inverse-toggler-border:        rgba($white,.1) !default
+
+$navbar-light-color:                rgba($black,.5) !default
+$navbar-light-hover-color:          rgba($black,.7) !default
+$navbar-light-active-color:         rgba($black,.9) !default
+$navbar-light-disabled-color:       rgba($black,.3) !default
+$navbar-light-toggler-bg: str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default
+$navbar-light-toggler-border:       rgba($black,.1) !default
+
+// Navs
+
+$nav-item-margin:               .2rem !default
+$nav-item-inline-spacer:        1rem !default
+$nav-link-padding:              .5em 1em !default
+$nav-link-hover-bg:             $gray-lighter !default
+$nav-disabled-link-color:       $gray-light !default
+
+$nav-tabs-border-color:                       #ddd !default
+$nav-tabs-border-width:                       $border-width !default
+$nav-tabs-border-radius:                      $border-radius !default
+$nav-tabs-link-hover-border-color:            $gray-lighter !default
+$nav-tabs-active-link-hover-color:            $gray !default
+$nav-tabs-active-link-hover-bg:               $body-bg !default
+$nav-tabs-active-link-hover-border-color:     #ddd !default
+$nav-tabs-justified-link-border-color:        #ddd !default
+$nav-tabs-justified-active-link-border-color: $body-bg !default
+
+$nav-pills-border-radius:     $border-radius !default
+$nav-pills-active-link-color: $component-active-color !default
+$nav-pills-active-link-bg:    $component-active-bg !default
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px ) !default
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints")
+@include _assert-starts-at-zero($grid-breakpoints)
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px ) !default
+@include _assert-ascending($container-max-widths, "$container-max-widths")
