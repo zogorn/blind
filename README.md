@@ -2,4 +2,4 @@
 
 my new template
 
-online [here](https://www.google.com)fefw
+online [here]https://zogorn.github.io/blind/)
