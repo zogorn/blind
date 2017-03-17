@@ -52,7 +52,35 @@
     </section><!-- end bigImage -->
     <!-- start about-us section-->
     <section id="aboutUs">
-      <div class="container"></div>
+      <div class="container">
+        <div class="carousel slide" id="aboutUsSlider" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li class="active" data-target="#aboutUsSlider" data-slide-to="0"></li>
+            <li data-target="#aboutUsSlider" data-slide-to="1"></li>
+            <li data-target="#aboutUsSlider" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active"><img src="assets/imgs/bigImage.png">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>hello</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><img src="assets/imgs/bigImage.png">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>hello</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div>
+            </div>
+            <div class="carousel-item"><img src="assets/imgs/bigImage.png">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>hello</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section><!-- end about-us section
     <!-- end the home body-->
     <!-- start footer-->
@@ -67,6 +95,13 @@
     <script src="assets/js/min/bootstrap.min.js"></script>
     <!-- main script-->
     <script src="assets/js/min/main.min.js"></script>
+    <!-- start carousel scripts-->
+    <script>
+      $('.carousel').carousel({
+      	interval: 6000,
+      	pause: false
+      });
+    </script><!-- end carousel scripts -->
     <!-- end including the scripts-->
   </body>
 </html>

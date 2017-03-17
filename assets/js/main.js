@@ -7,6 +7,8 @@ function setHeight(element) {
 	element.style.height = (wHeight - navHeight) + 'px' ;
 } // End setHeight
 
+
 document.ready = (function(){
 	setHeight(bigImage);
+
 }());

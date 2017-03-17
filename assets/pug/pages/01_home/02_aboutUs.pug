@@ -1,6 +1,27 @@
 // start about-us section
 section#aboutUs
 	.container
-		
+		#aboutUsSlider.carousel.slide(data-ride='carousel')
+			ol.carousel-indicators
+				li(data-target='#aboutUsSlider' data-slide-to='0').active
+				li(data-target='#aboutUsSlider' data-slide-to='1')
+				li(data-target='#aboutUsSlider' data-slide-to='2')
+
+			.carousel-inner(role='listbox')
+				.carousel-item.active
+					img(src='assets/imgs/bigImage.png')
+					.carousel-caption.d-none.d-md-block
+						h3 hello
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				.carousel-item
+					img(src='assets/imgs/bigImage.png')
+					.carousel-caption.d-none.d-md-block
+						h3 hello
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				.carousel-item
+					img(src='assets/imgs/bigImage.png')
+					.carousel-caption.d-none.d-md-block
+						h3 hello
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
 <!-- end about-us section
