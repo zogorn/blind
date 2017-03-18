@@ -4,27 +4,45 @@
 			height: 50px
 			max-width: 40px
 			border-radius: 0 50%
+			transition: all 0.5s ease-in-out
+			.triangle
+				position: absolute
+				top: -77px
+				left: -11px
+				border-left: 50px solid transparent
+				border-right: 50px solid transparent
+				border-top: 80px solid transparent
+				width: 0
+				height: 0
 			&.active
 				background-color: $white
 				border-radius: 50% 0
 				.triangle
-					position: absolute
-					top: -77px
-					left: -11px
-					border-left: 50px solid transparent
-					border-right: 50px solid transparent
 					border-top: 80px solid $white
-					width: 0
-					height: 0
 
+					
 	.carousel-item
-		z-index: 1600	
 		.carousel-words
-			height: 100px
 			margin-top: 100px
 			margin-bottom: 100px
-			padding-top: 70px
-			padding-bottom: 170px
+			padding: 70px 25px 50px
 			background-color: $white
 			h3
 				margin-bottom: 30px
+				position: relative
+				&::before
+					@extend %beforeAndAfter
+					left: 50%
+				&::after
+					@extend %beforeAndAfter
+					right: 50%
+
+
+// extend the before and after
+%beforeAndAfter
+	position: absolute
+	content: ''
+	top: 30px
+	background-color: $red
+	width: 15%
+	height: 2px
