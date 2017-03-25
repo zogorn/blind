@@ -56,13 +56,19 @@
         <div class="carousel slide" id="aboutUsSlider" data-ride="carousel">
           <ol class="carousel-indicators">
             <li class="active" data-target="#aboutUsSlider" data-slide-to="0">
-              <div class="triangle"></div>
+              <div class="triangle">
+                <div class="tr-background"></div>
+              </div>
             </li>
             <li data-target="#aboutUsSlider" data-slide-to="1">
-              <div class="triangle"></div>
+              <div class="triangle">
+                <div class="tr-background"></div>
+              </div>
             </li>
             <li data-target="#aboutUsSlider" data-slide-to="2">
-              <div class="triangle"></div>
+              <div class="triangle">
+                <div class="tr-background"></div>
+              </div>
             </li>
           </ol>
           <div class="carousel-inner" role="listbox">
@@ -88,6 +94,20 @@
         </div>
       </div>
     </section><!-- end about-us section
+    <!-- start results section-->
+    <section class="text-center" id="results">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="h1 text-capitalize">our results</h3>
+          </div>
+          <div class="col-md-3 col-sm-6"><i class="fa fa-google-wallet fa-2x fa-fw"></i><span class="d-block">312</span></div>
+          <div class="col-md-3 col-sm-6"><i class="fa fa-legal fa-2x fa-fw"></i><span class="d-block">583</span></div>
+          <div class="col-md-3 col-sm-6"><i class="fa fa-key fa-2x fa-fw"></i><span class="d-block">135</span></div>
+          <div class="col-md-3 col-sm-6"><i class="fa fa-map-pin fa-2x fa-fw"></i><span class="d-block">874</span></div>
+        </div><!-- end row -->
+      </div><!-- end container -->
+    </section><!-- end results section -->
     <!-- end the home body-->
     <!-- start footer-->
     <footer class="siteFooter"></footer>
@@ -104,7 +124,7 @@
     <!-- start carousel scripts-->
     <script>
       $('.carousel').carousel({
-      	interval: 6000,
+      	interval: 600000,
       	pause: false
       });
     </script><!-- end carousel scripts -->
