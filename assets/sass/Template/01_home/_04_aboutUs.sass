@@ -1,11 +1,22 @@
-=border($deg)
+// triangle
+=border($deg, $color)
   position: absolute
   content: ''
   top: -13px
   width: 40px
   height: 2px
-  background-color: darken($red, 10%)
+  background-color: darken($color, 10%)
   transform: rotate($deg)
+
+// extend the before and after
+=underLine($dir)
+	position: absolute
+	content: ''
+	top: 30px
+	#{$dir}: 50%
+	background-color: $red
+	width: 15%
+	height: 2px
 
 #aboutUs
 	.carousel-indicators
@@ -16,23 +27,30 @@
 			border: 1px solid $red
 			transition: all 0.5s ease-in-out
 			position: relative
-			&.active
+			&.active // li active
 				background-color: lighten($red, 10%)
 				border: 1px solid lighten($red, 10%)
 				border-radius: 50% 0
+				.triangle
+					position: relative
+					top: -1px
+					left: 5px
+					&::after // triangle
+						+border(45deg,$red)
+						left: 0
+					&::before // triangle
+						+border(-45deg,$red)
+						left: 27px
+					.tr-background
+						position: absolute
+						z-index: -2
+						top: -27px
+						left: 6px
+						border-left: 27px solid transparent
+						border-right: 28px solid transparent
+						border-top: 28px solid $white
 
-			.triangle
-				position: absolute
-				top: -1px
-				left: 5px
-				&::after
-					+border(45deg)
-					left: 0
-				&::before
-					+border(-45deg)
-					left: 27px
-					
-	.carousel-item
+	.carousel-item // from aboutUs
 		.carousel-words
 			margin-top: 100px
 			margin-bottom: 100px
@@ -43,18 +61,8 @@
 				margin-bottom: 30px
 				position: relative
 				&::before
-					@extend %beforeAndAfter
-					left: 50%
+					+underLine(left)
 				&::after
-					@extend %beforeAndAfter
-					right: 50%
+					+underLine(right)
 
 
-// extend the before and after
-%beforeAndAfter
-	position: absolute
-	content: ''
-	top: 30px
-	background-color: $red
-	width: 15%
-	height: 2px
